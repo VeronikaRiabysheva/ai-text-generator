@@ -1,0 +1,137 @@
+/* Общие стили */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовки */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4a90e2;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+/* Загрузка файлов */
+.upload-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.upload-section input {
+  padding: 5px;
+}
+
+.upload-section button {
+  padding: 7px 15px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-section button:disabled {
+  background: #a0c4ff;
+  cursor: not-allowed;
+}
+
+/* Результаты */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.file-block {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Описание */
+.descriptions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.desc-block {
+  flex: 1;
+  min-width: 300px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-block pre {
+  flex: 1;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  max-height: 300px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+/* Кнопки внутри блоков */
+.desc-block button {
+  align-self: flex-start;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+.desc-block button:hover {
+  background: #357ab8;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .descriptions {
+    flex-direction: column;
+  }
+}
+
+.python-desc {
+  font-family: "Courier New", monospace;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.python-desc strong {
+  color: #1f2937; /* темно-серый */
+}
+
+.python-desc div {
+  line-height: 1.4;
+}
