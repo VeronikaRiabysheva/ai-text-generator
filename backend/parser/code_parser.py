@@ -33,7 +33,7 @@ class CodeParser:
         self.dependencies: List[str] = []
 
     def parse_file(self):
-        """Парсим один файл и собираем всё-всё"""
+        """Парсим один файл и собираем всё"""
         try:
             with open(self.file_path, "r", encoding="utf-8") as f:
                 source = f.read()
