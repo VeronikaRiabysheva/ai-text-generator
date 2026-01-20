@@ -70,6 +70,7 @@ def generate_simple_description(file_path: str) -> str:
 
 @app.post("/generate")
 async def generate(files: list[UploadFile] = File(...)):
+    print(" /generate CALLED")
     results = []
 
     for file in files:
