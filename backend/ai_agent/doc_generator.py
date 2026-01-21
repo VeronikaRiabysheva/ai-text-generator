@@ -5,7 +5,7 @@ import ast
 class DocGenerator:
     def __init__(self, device="cpu"):
         self.device = device
-        print("🔄 Loading model: Salesforce/codegen-350M-mono")
+        print("Loading model: Salesforce/codegen-350M-mono")
 
         self.tokenizer = AutoTokenizer.from_pretrained("Salesforce/codegen-350M-mono")
         self.model = AutoModelForCausalLM.from_pretrained(
@@ -15,7 +15,7 @@ class DocGenerator:
         ).to(self.device)
 
         self.model.eval()
-        print("✅ Model loaded")
+        print("Model loaded")
 
     def _build_prompt(self, entity: dict) -> str:
         classes_block = "\n".join(

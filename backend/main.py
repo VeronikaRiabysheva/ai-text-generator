@@ -14,8 +14,6 @@ app.add_middleware(
 
 generator = DocGenerator(device="cpu")
 
-# ----------------- Простая генерация текста на Python -----------------
-# backend/main.py
 def generate_simple_description(file_path: str) -> str:
     parser = CodeParser(file_path)
     parser.parse_file()
